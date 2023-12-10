@@ -1,0 +1,233 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Blog Management System",
+    "description": "APIs for a blog management system",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/api/blogs": {
+      "get": {
+        "tags": ["Blog"],
+        "summary": "Get all blogs",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Blog"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Blog"],
+        "summary": "Create a blog",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/Blog"
+            }
+          }
+        }
+      }
+    },
+    "/api/blogs/{id}": {
+      "get": {
+        "tags": ["Blog"],
+        "summary": "Get a specific blog by ID",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Blog"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Blog"],
+        "summary": "Update a blog by ID",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Blog"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Blog"],
+        "summary": "Delete a blog by ID",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/api/category": {
+      "get": {
+        "tags": ["Category"],
+        "summary": "Get all categories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+
+    "/api/auth/signup": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Register as a user",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Login as a user",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Logout a user",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Get current user details",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "User": {
+        "required": ["name", "email", "password"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "uniqueItems": true,
+            "default": "uuid()"
+          },
+          "createdAt": {
+            "type": "DateTime",
+            "default": "now()"
+          },
+          "updatedAt": {
+            "type": "DateTime",
+            "default": "updatedAt"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "password": {
+            "type": "string"
+          },
+          "blogs": {
+            "type": "Blog[]"
+          }
+        }
+      },
+      "Blog": {
+        "required": ["title", "content", "categoryId"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "uniqueItems": true,
+            "default": "uuid()"
+          },
+          "createdAt": {
+            "type": "DateTime",
+            "default": "now()"
+          },
+          "updatedAt": {
+            "type": "DateTime",
+            "default": "updatedAt"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "categoryId": {
+            "type": "string"
+          }
+        }
+      },
+      "Category": {
+        "required": ["name"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "uniqueItems": true,
+            "default": "uuid()"
+          },
+          "createdAt": {
+            "type": "DateTime",
+            "default": "now()"
+          },
+          "updatedAt": {
+            "type": "DateTime",
+            "default": "updatedAt"
+          },
+          "name": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "blogs": {
+            "type": "Blog[]"
+          }
+        }
+      }
+    }
+  }
+}

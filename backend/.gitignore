@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Compiled output
+*.js
+*.d.ts
+*.map
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Mac OS files
+.DS_Store
+
+# Testing artifacts
+coverage/
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
+
+
+# Prettier cache
+.prettierc
+
+# Jest cache and artifacts
+jest.config.ts
+jest.config.js
+jest.setup.ts
+coverage/
+
+# NPM debug log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Yarn Integrity file
+.yarn-integrity
