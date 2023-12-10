@@ -22,6 +22,8 @@ const BlogListTable = () => {
     return <Loading />;
   }
 
+  // Not using notifications packages or custom components because of time.
+
   {
     if (
       isError &&
