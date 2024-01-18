@@ -3,14 +3,6 @@
 
 The "blog-app-sushant" project serves as the backend component of a web application. It is responsible for handling server-side logic, APIs, and data management. The project utilizes modern backend technologies to ensure smooth operation and security.
 
-## Scripts
-
-The following scripts are available to facilitate development, build, and execution processes:
-
-- **build**: Compile TypeScript files using the TypeScript compiler.
-- **start**: Start the backend server after it's been built.
-- **dev**: Run TypeScript compilation in watch mode and start the server using Nodemon concurrently.
-
 ## Getting Started
 
 1. Clone the repository to your local machine.
