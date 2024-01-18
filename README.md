@@ -7,9 +7,10 @@ A basic blog app where users can regsiter and CRUD their blogs and see other use
 2. Install the project dependencies using `npm install or yarn`.
 3. Set up your environment variables by creating a `.env` file in the root directory(see env example).
    You need to have postgresql installed on your machine cz this app uses postgresql as Db.
-4. Then prisma db pull to set all the migration(tables) to your local db.   
-5. Run the development server using `npm run dev or yarn dev`.
-6. Access the backend APIs at the specified address.
+4. Then prisma db pull to set all the migration(tables) to your local db.
+5. If you still get error in migration check this docs out [https://www.prisma.io/docs/orm/prisma-migrate/getting-started] else move to point 6. 
+6. Run the development server using `npm run dev or yarn dev`.
+7. Access the backend APIs at the specified address.
 
 
 ## Getting Started For Frontend
