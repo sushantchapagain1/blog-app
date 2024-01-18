@@ -21,7 +21,7 @@ A basic blog app where users can regsiter and CRUD their blogs and see other use
 4. Start the development server with `npm run dev` or `yarn dev`.
 5. Run tests using `npm run test` or `yarn test`.
 6. Access the application in your browser at the specified address.
-7. See API docs after running the backend at [http://localhost:8000/api-docs](http://localhost:8000/api-docs).
+7. See API docs after running the backend at [http://localhost:8000/api-docs](http://localhost:8000/api-docs)-if you specify port 8000 in backend PORT else the port you have written.
 
 ## Contribution
 
