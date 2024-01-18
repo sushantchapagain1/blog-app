@@ -1,51 +1,7 @@
 # Backend Project README
-
-Welcome to the "blog-app-sushant" project! This README file provides an overview of the project structure, key dependencies, scripts, and instructions to get started.
-
 ## Project Overview
 
 The "blog-app-sushant" project serves as the backend component of a web application. It is responsible for handling server-side logic, APIs, and data management. The project utilizes modern backend technologies to ensure smooth operation and security.
-
-## Project Structure
-
-The project follows a common structure for a Node.js backend application:
-
-- **dist**: Contains the compiled TypeScript files after the build process.
-- **src**: This directory holds the source code of the backend application.
-  - **controllers**: Logic to handle incoming requests and generate responses.
-  - **middlewares**: Custom middleware for request processing.
-  - **models**: Data models and schemas.
-  - **routes**: API route definitions.
-  - **utils**: Utility functions and helper scripts.
-  - **index.ts**: The entry point of the application.
-- **package.json**: Configuration file for Node.js dependencies and scripts.
-- **tsconfig.json**: TypeScript configuration file.
-
-## Dependencies
-
-The project relies on various third-party dependencies to enable specific functionalities and enhance backend development. Key dependencies include:
-
-- **@prisma/client**: Prisma client for database access and management.
-- **bcryptjs**: Library for hashing passwords securely.
-- **cloudinary**: Library for working with the Cloudinary service for image and video management.
-- **cookie-parser**: Middleware for parsing cookies from incoming requests.
-- **cors**: Middleware for enabling Cross-Origin Resource Sharing.
-- **dotenv**: Loads environment variables from a `.env` file.
-- **express**: Fast and minimalist web framework for Node.js.
-- **express-rate-limit**: Middleware for rate limiting incoming requests.
-- **helmet**: Middleware for enhancing API security by setting various HTTP headers.
-- **jsonwebtoken**: Library for generating and verifying JSON Web Tokens (JWT).
-- **zod**: TypeScript-first schema validation library.
-
-## Development Dependencies
-
-These dependencies are used during development and build processes:
-
-- **@types**: Type definitions for various packages, improving TypeScript development.
-- **concurrently**: Run multiple commands concurrently.
-- **nodemon**: Monitor for changes in the source and restart the server automatically.
-- **prisma**: Prisma CLI for database migrations and operations.
-- **typescript**: TypeScript language compiler.
 
 ## Scripts
 
